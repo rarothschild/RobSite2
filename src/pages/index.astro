@@ -1,96 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+// TODO: Make this a script to automatically import images froma folder
+import pic1 from '../images/me/IMG_1864.jpg';
+import pic2 from '../images/me/IMG_1873.jpg';
+import pic3 from '../images/me/PXL_20220619_035359281.jpg';
+import pic4 from '../images/me/PXL_20220619_035912682.jpg';
+import pic5 from '../images/me/PXL_20220619_040001270.PANO.jpg';
+import pic6 from '../images/me/PXL_20220706_205846347.jpg';
+
+function dirToList() {
+	var li = document.createElement('li')
+
+}
 ---
-
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	.columns { height: 100%;}
 </style>
+
+<Layout title="HomePage">
+	<div class="columns is-vcentered">
+		<div class="column is=4">
+			<div class="swiffy-slider slider-item-reveal slider-item-ratio slider-item-ratio-4x3 slider-nav-caretfill slider-nav-outside slider-indicators-square slider-indicators-dark slider-indicators-outside slider-nav-animation-appear">
+				<ul class="slider-container">
+					<li><img style="margin-bottom: 0px;" src={pic1} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic2} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic3} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic4} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic5} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic6} alt="Pic of me"/></li>
+				</ul>
+				<button type="button" class="slider-nav"></button>
+				<button type="button" class="slider-nav slider-nav-next"></button>
+			
+				<div class="slider-indicators">
+					<button class="active"></button>
+					<button></button>
+					<button></button>
+				</div>
+			</div>
+		</div>
+		<div class="column is=8">
+			<h1>Welcome to my website!</h1><br>
+			<h1>This is a way where I can expiriement with new </h1>
+		</div>
+	</div>
+</Layout>

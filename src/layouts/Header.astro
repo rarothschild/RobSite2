@@ -1,0 +1,49 @@
+---
+import RobPic from '../images/me/RobPicMain.jpg';
+---
+
+    <div class="columns is-gapless" style="margin-bottom: 0px">
+        <div class="column is-2" style="margin-top: auto;">
+            <img class="profPic" style="margin-bottom: 0px;" src={RobPic} alt="Pic of me"/>
+        </div>
+        <div class="column is-4 " style="margin-top: auto" >
+            <p id="name">Rob Rothschild</p>
+        </div>
+        <div class="column is-4 "></div>
+        <div class="column is-2" id="contactInfo">
+            <strong>Contact Info:</strong><br>
+            rarothsc@gmail.com<br>
+            <a class="button is-small is-github">
+                <span class="icon">
+                  <i class="fab fa-github fa-lg"></i>
+                </span>
+            </a>
+            <a class="button is-small is-linkedin">
+                <span class="icon">
+                  <i class="fab fa-linkedin fa-lg"></i>
+                </span>
+            </a>
+            <a class="button is-small is-instagram">
+                <span class="icon">
+                  <i class="fab fa-instagram fa-lg"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+
+<style>
+    .profPic {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #name {
+        vertical-align: bottom;
+        font-size:xx-large;
+        font-weight: bolder;
+    }
+    #contactInfo {
+        text-align: center;
+        margin-top: auto;
+    }
+</style>

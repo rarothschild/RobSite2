@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "astro": "^1.0.6"
+  },
+  "dependencies": {
+    "bulma-social": "^2.1.0"
   }
 }

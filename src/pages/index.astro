@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-// TODO: Make this a script to automatically import images froma folder
+// TODO: Make this a script to automatically import images from a folder
 import pic1 from '../images/me/IMG_1864.jpg';
 import pic2 from '../images/me/IMG_1873.jpg';
 import pic3 from '../images/me/PXL_20220619_035359281.jpg';
@@ -14,19 +14,20 @@ function dirToList() {
 
 }
 ---
+
 <style>
-	.columns { height: 100%;}
+	.columns {margin-top: ;}
 </style>
 
 <Layout title="HomePage">
-	<div class="columns is-vcentered">
-		<div class="column is=4">
-			<div class="swiffy-slider slider-item-reveal slider-item-ratio slider-item-ratio-4x3 slider-nav-caretfill slider-nav-outside slider-indicators-square slider-indicators-dark slider-indicators-outside slider-nav-animation-appear">
+	<div class="columns">
+		<div class="column is=6">
+			<div class="swiffy-slider slider-item-reveal slider-item-ratio slider-nav-visible slider-item-ratio-4x3 slider-nav-caretfill slider-nav-dark slider-nav-outside slider-indicators-dark slider-indicators-outside slider-nav-animation-appear">
 				<ul class="slider-container">
-					<li><img style="margin-bottom: 0px;" src={pic1} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic4} alt="Pic of me"/></li>
 					<li><img style="margin-bottom: 0px;" src={pic2} alt="Pic of me"/></li>
 					<li><img style="margin-bottom: 0px;" src={pic3} alt="Pic of me"/></li>
-					<li><img style="margin-bottom: 0px;" src={pic4} alt="Pic of me"/></li>
+					<li><img style="margin-bottom: 0px;" src={pic1} alt="Pic of me"/></li>
 					<li><img style="margin-bottom: 0px;" src={pic5} alt="Pic of me"/></li>
 					<li><img style="margin-bottom: 0px;" src={pic6} alt="Pic of me"/></li>
 				</ul>
@@ -40,9 +41,9 @@ function dirToList() {
 				</div>
 			</div>
 		</div>
-		<div class="column is=8">
-			<h1>Welcome to my website!</h1><br>
-			<h1>This is a way where I can expiriement with new </h1>
+		<div class="column is=6" style="margin: auto auto;">
+			<h1>Welcome to my website! (Currently being updated to look better)</h1><br>
+			<h1>This is a way where I can experiment with and show new web develoment or software engineering tequniques.</h1>
 		</div>
 	</div>
 </Layout>

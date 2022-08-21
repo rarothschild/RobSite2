@@ -2,6 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+<style>
+    .container {display: flex}
+    .resume {margin: auto auto}
+</style>
+
 <Layout title="Projects">
-    <p>Test Projects</p>
+    <div class="container">
+        <div class="resume">
+            <embed src="/RothschildResume.pdf" width="900px" height="810px" />
+        </div>
+    </div>
 </Layout>

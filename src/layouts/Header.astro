@@ -1,49 +1,46 @@
 ---
 import RobPic from '../images/me/RobPicMain.jpg';
+
+
+
 ---
 
-    <div class="columns is-gapless" style="margin-bottom: 0px">
-        <div class="column is-2" style="margin-top: auto;">
-            <img class="profPic" style="margin-bottom: 0px;" src={RobPic} alt="Pic of me"/>
-        </div>
-        <div class="column is-4 " style="margin-top: auto" >
-            <p id="name">Rob Rothschild</p>
-        </div>
-        <div class="column is-4 "></div>
-        <div class="column is-2" id="contactInfo">
-            <strong>Contact Info:</strong><br>
-            rarothsc@gmail.com<br>
-            <a class="button is-small is-github">
-                <span class="icon">
-                  <i class="fab fa-github fa-lg"></i>
-                </span>
-            </a>
-            <a class="button is-small is-linkedin">
-                <span class="icon">
-                  <i class="fab fa-linkedin fa-lg"></i>
-                </span>
-            </a>
-            <a class="button is-small is-instagram">
-                <span class="icon">
-                  <i class="fab fa-instagram fa-lg"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-
 <style>
-    .profPic {
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+    .columns:not(:last-child) {margin-bottom: 0;}
+    .column {margin-top: auto;}
     #name {
-        vertical-align: bottom;
-        font-size:xx-large;
+        font-size: var(--font-size-xl);
         font-weight: bolder;
+        text-align: center;
+        color: hsl(0, 3%, 30%);
     }
     #contactInfo {
         text-align: center;
-        margin-top: auto;
     }
 </style>
+
+<div class="columns is-vcentered">
+    <div class="column is-8">
+        <p id="name">Rob Rothschild</p>
+    </div>
+    <div class="column is-4" id="contactInfo">
+        <strong>Contact Info:</strong><br>
+        rarothsc@gmail.com<br>
+        <a href="https://github.com/rarothschild" class="button is-small is-github">
+            <span class="icon">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+        </a>
+        <a href="https://www.linkedin.com/in/robert-rothschild-33605aa6" class="button is-small is-linkedin">
+            <span class="icon">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </span>
+        </a>
+        <a href="https://www.instagram.com/rothschild.robert/" class="button is-small is-instagram">
+            <span class="icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </span>
+        </a>
+    </div>
+</div>
+

@@ -1,8 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// TODO: Make this a script to automatically import images from a folder
-//import pic1 from '../images/me/IMG_1864.jpg';
-//import pic2 from '../images/me/IMG_1873.jpg';
 import pic3 from '../images/me/PXL_20220619_035359281.jpg';
 import pic4 from '../images/me/PXL_20220619_035912682.jpg';
 import pic5 from '../images/me/PXL_20220619_040001270.PANO.jpg';
@@ -10,23 +7,28 @@ import pic6 from '../images/me/PXL_20220706_205846347.jpg';
 
 function dirToList() {
 	var li = document.createElement('li')
-
 }
 ---
 
 <style>
-	.columns {margin-top: ;}
+	#imageSlider {height: 10vh;}
 </style>
 
 <Layout title="HomePage">
-	<div class="columns">
-		<div class="column is=6">
+	<div class="container has-text-centered">
+		<div class="block ">
+			<strong>Welcome</strong>
+		</div>
+		<div class="block ">
+			<p>My name is Robert Rothschild, on this site you can find the different projects I've been working on. 
+				I went to school at Fort Lewis in Durango CO for Engineering, worked as an Aerospace Engineer at The Heliospace Corporation, 
+				and am currently teaching myself Web Development in conjunction with other Software Engineering techniques.</p>
+		</div>
+		<div class="block" id="imageSlider">
 			<div class="swiffy-slider slider-item-reveal slider-item-ratio slider-nav-visible slider-item-ratio-4x3 slider-nav-caretfill slider-nav-dark slider-nav-outside slider-indicators-dark slider-indicators-outside slider-nav-animation-appear">
 				<ul class="slider-container">
 					<li><img style="margin-bottom: 0px;" src={pic4} alt="Pic of me"/></li>
-					<!-- <li><img style="margin-bottom: 0px;" src={pic2} alt="Pic of me"/></li> -->
 					<li><img style="margin-bottom: 0px;" src={pic3} alt="Pic of me"/></li>
-					<!-- <li><img style="margin-bottom: 0px;" src={pic1} alt="Pic of me"/></li> -->
 					<li><img style="margin-bottom: 0px;" src={pic5} alt="Pic of me"/></li>
 					<li><img style="margin-bottom: 0px;" src={pic6} alt="Pic of me"/></li>
 				</ul>
@@ -39,10 +41,6 @@ function dirToList() {
 					<button></button>
 				</div>
 			</div>
-		</div>
-		<div class="column is=6" style="margin: auto auto;">
-			<h1>Welcome to my website! (Currently being updated to look better)</h1><br>
-			<h1>This is a way where I can experiment with and show new web develoment or software engineering tequniques.</h1>
 		</div>
 	</div>
 </Layout>

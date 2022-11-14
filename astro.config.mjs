@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
+
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://rarothschild.github.io",
-    base: "RobSite2/",
-    trailingSlash: "never"
+  site: "https://rarothschild.github.io",
+  integrations: [tailwind(), image()]
 });

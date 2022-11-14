@@ -13,6 +13,10 @@
     "astro": "^1.0.6"
   },
   "dependencies": {
-    "bulma-social": "^2.1.0"
+    "@astrojs/image": "^0.11.1",
+    "@astrojs/tailwind": "^2.1.2",
+    "bulma-social": "^2.1.0",
+    "sharp": "^0.31.2",
+    "tailwindcss": "^3.2.2"
   }
 }

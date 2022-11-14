@@ -1,65 +1,43 @@
 ---
-import pic3 from '../images/me/PXL_20220619_035359281.jpg';
-import pic4 from '../images/me/PXL_20220619_035912682.jpg';
-import pic5 from '../images/me/PXL_20220619_040001270.PANO.jpg';
-import pic6 from '../images/me/PXL_20220706_205846347.jpg';
-
+import PhotoViewport from '../components/PhotoViewport.astro';
 import Layout from '../layouts/Layout.astro';
+import { Image } from '@astrojs/image/components';
 
-export interface Props {
-	title: string;
-}
+import MainPic from '../images/Main.jpg'
 
-const { title } = Astro.props as Props;
+import nature1 from '../images/Nature/PXL_20220920_215946391.jpg';
+import nature2 from '../images/Nature/PXL_20221016_010801721.jpg';
+import nature3 from '../images/Nature/PXL_20221018_181309738.jpg';
+import nature4 from '../images/Nature/PXL_20221029_203935610.jpg';
+import nature5 from '../images/Nature/PXL_20221029_221136208.jpg';
 
-function dirToList() {
-	var li = document.createElement('li')
-}
+import sports1 from '../images/Sports/IMG_1744.jpg';
+import sports2 from '../images/Sports/PXL_20220306_200708888.jpg';
+import sports3 from '../images/Sports/PXL_20220601_040603592~2.jpg';
+import sports4 from '../images/Sports/PXL_20220730_000021384.jpg';
+import sports5 from '../images/Sports/PXL_20220803_161524688.jpg';
+
+const PhotosNature = [nature1,nature2,nature3,nature4,nature5];
+const PhotosSports = [sports1,sports2,sports3,sports4,sports5];
+
 ---
 
-<style>
-	#MainPage {
-		margin-top: 5vh;
-		padding-left: 2em;
-		padding-right: 2em;
-		}
-	#BioBlerb {
-		padding-top: 4em
-	}
-</style>
-
 <Layout title="Home">
-	<div class="has-text-centered">
-		<div class="columns" id="MainPage">
-			<div class="column" id="BioBlerb">
-				<div class="block">
-					<strong>Welcome!</strong>
-				</div>
-				<div class="block">
-					<p>My name is Robert Rothschild, on this site you can find the different projects I've been working on. 
-						I went to school at Fort Lewis in Durango CO for Engineering, worked as an Aerospace Engineer at The Heliospace Corporation, 
+	<div class="flex flex-col gap-2 items-center max-w-5xl mx-auto">
+		<div class="flex flex-col p-4 gap-4 text-center font-medium">
+			<div class="flex flex-row items-center gap-4 pt-10">
+				<Image src={MainPic} alt="Main Photo" height={250} />
+				<div class="grid gap-4 max-w-xl">
+					<p>Currently residing in Bellingham WA, I'm an Engineer and Developer.
+						Take a peek at some photography down below for some recent adventures.</p>
+					<p>I went to school at Fort Lewis in Durango CO for Engineering, worked as an Aerospace Engineer at The Heliospace Corporation, 
 						and am currently teaching myself Web Development in conjunction with other Software Engineering techniques.</p>
 				</div>
 			</div>
-			<div id="imageSlider" class="column">
-				<div class="swiffy-slider slider-item-reveal slider-item-ratio slider-nav-visible slider-item-ratio-4x3 slider-nav-caretfill slider-nav-dark slider-nav-outside slider-indicators-dark slider-indicators-outside slider-nav-animation-appear">
-					<ul class="slider-container">
-						<li><img style="margin-bottom: 0px;" src={pic4} alt="Pic of me"/></li>
-						<li><img style="margin-bottom: 0px;" src={pic3} alt="Pic of me"/></li>
-						<li><img style="margin-bottom: 0px;" src={pic5} alt="Pic of me"/></li>
-						<li><img style="margin-bottom: 0px;" src={pic6} alt="Pic of me"/></li>
-					</ul>
-					<button type="button" class="slider-nav"></button>
-					<button type="button" class="slider-nav slider-nav-next"></button>
-				
-					<div class="slider-indicators">
-						<button class="active"></button>
-						<button></button>
-						<button></button>
-						<button></button>
-					</div>
-				</div>
-			</div>
+		</div>
+		<div class="flex flex-row p-4 gap-4">
+			<PhotoViewport title="Nature Shots" photos={PhotosNature} />
+			<PhotoViewport title="Sports Shots" photos={PhotosSports} />
 		</div>
 	</div>
 </Layout>
